@@ -1,0 +1,40 @@
+
+<p>Contact Form</p>
+<form>
+  <label><br><br>
+    <span>Name</span>
+    <input name="name"
+          placeholder="name"
+          [(ngModel)]="name"/>
+
+          <div class="error"*ngIf="isNameInvalid">Name is not valid!</div>
+        </label>
+  
+  <label>
+    <span>Email</span>
+    <input name="Email"
+           placeholder="email"
+            (keyup) = "emailChanged()"  
+           [(ngModel)]="email"/>
+
+           <div class="error"*ngIf="isEmailInvalid">Email is invalid!</div>
+          </label>
+          <br>
+    <label>
+      <span>Message</span>
+      <textarea name="message"
+                [(ngModel)]="message">
+        </textarea>
+    </label>
+
+
+  <button (click)="formSubmit()">Submit</button>
+  
+</form>
+
+<div class="text-map">My Location</div>
+<div class="map">
+<agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</div>

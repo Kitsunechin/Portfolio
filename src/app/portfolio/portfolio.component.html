@@ -1,0 +1,18 @@
+<p>
+  My work portfolio
+</p>
+<div class="flex-row">
+  <div class="btns">
+  <button class="btn" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+  <button class="btn" [class.active]="filterBy=='nature'"  (click)="filterBy='nature'">Nature</button>
+  <button class="btn" [class.active]="filterBy=='animals'"  (click)="filterBy='animals'">Animals</button>
+  <button class="btn" [class.active]="filterBy=='people'"  (click)="filterBy='people'">People</button>
+  <button class="btn" [class.active]="filterBy=='city'"  (click)="filterBy='city'">City</button>
+  </div>
+  <ul id="thumb">
+    <li *ngFor="let image of Images| imageFilter: filterBy">
+        <a [routerLink]="['/image', image.id]" routerActive="active">
+      <img src = "{{image.url}}"  width="250" height="300"></a>
+    </li>
+  </ul>
+</div>
