@@ -1,7 +1,10 @@
+
+ 
 form{
     margin-left: 100px;
     font-family: 'Lato', sans-serif;
     font-size: 1.5em;
+   
     
 }
 
@@ -63,7 +66,7 @@ button:hover{
 
 agm-map {
     height: 300px;
-    width: 450px;
+    width: 400px;
     position: absolute;
     margin-left: 550px;
     bottom: 70px;
